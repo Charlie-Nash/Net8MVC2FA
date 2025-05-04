@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "2FA";
+}
+
+<h2>Autenticación en dos pasos</h2>
+
+@if (ViewBag.QRCodeImage != "")
+{
+    <span>Escanee el siguiente QR con su app de autenticación</span>
+    <br />
+
+    <img src="@ViewBag.QRCodeImage" width="200" />
+    <br />
+}
+
+<form method="post">
+    <input type="hidden" name="username" value="@ViewBag.Username" />
+
+    <label class ="mt-1">Código del autenticador</label><br />
+    <input type="text" name="code" required /><br />
+    
+    <input type="submit" value="Verificar" class="btn btn-success mt-2" />
+    <a href="/Login/Index" class="btn btn-danger mt-2">Cancelar</a>
+</form>
+
+<br />
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red;">@ViewBag.Error</p>
+}

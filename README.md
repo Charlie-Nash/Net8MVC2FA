@@ -1,0 +1,108 @@
+# 🎯 Net8MVC2FA
+
+Aplicación web construida con **ASP.NET Core MVC (.NET 8)** que implementa autenticación en dos pasos (2FA) usando Google Authenticator. Ideal para pruebas educativas y despliegue en entornos controlados.
+
+---
+
+## 🚀 Características
+
+- Aplicación MVC Web desarrollada con ASP.NET Core.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- .NET 8 (ASP.NET Core MVC)
+- BCrypt para hash de contraseñas
+- TOTP / Google Authenticator
+- Linux Ubuntu 22.04 (AWS)
+
+---
+
+## 🌐 URL en línea
+
+> http://3.80.216.213:5000/
+
+Usa una lista de usuarios **simulada en memoria** al iniciar el proyecto:
+
+```csharp
+Usuarios = new List<Usuario>
+{
+    new Usuario
+    {
+        Nick = "admin",
+        PwdHash = BCrypt.Net.BCrypt.HashPassword("1234"),
+        Requiere2FA = true,
+        RequiereQR = true,
+        SecretKey = Base32Encoding.ToString(KeyGeneration.GenerateRandomKey(20))
+    },
+    new Usuario
+    {
+        Nick = "cpenac",
+        PwdHash = BCrypt.Net.BCrypt.HashPassword("1234"),
+        Requiere2FA = true,
+        RequiereQR = true,
+        SecretKey = Base32Encoding.ToString(KeyGeneration.GenerateRandomKey(20))
+    },
+    new Usuario
+    {
+        Nick = "aestrada",
+        PwdHash = BCrypt.Net.BCrypt.HashPassword("1234"),
+        Requiere2FA = true,
+        RequiereQR = true,
+        SecretKey = Base32Encoding.ToString(KeyGeneration.GenerateRandomKey(20))
+    }
+};
+```
+
+---
+
+## ▶️ Cómo ejecutar en AWS (Ubuntu Server)
+
+### 1. Actualizar paquetes del sistema
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### 2. Instalar dependencias necesarias
+
+```bash
+sudo apt install -y wget apt-transport-https
+```
+
+### 3. Agregar el repositorio de Microsoft
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+### 4. Instalar .NET Runtime 8
+
+```bash
+sudo apt update
+sudo apt install -y dotnet-runtime-8.0 aspnetcore-runtime-8.0
+```
+
+### 5. Copiar y ejecutar la aplicación
+
+```bash
+cd /home/ubuntu/app
+sudo dotnet WebAppSSO.dll --urls "http://0.0.0.0:5000"
+```
+
+---
+
+## 👥 Autores
+
+**Grupo 01**  
+- Antonio Estrada  
+- Carlos Peña  
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso libre para fines educativos y personales.  
+No se permite su uso con fines comerciales sin autorización previa.

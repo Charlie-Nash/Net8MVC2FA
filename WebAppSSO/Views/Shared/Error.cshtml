@@ -1,0 +1,18 @@
+﻿@model ErrorViewModel
+
+<h1 class="text-danger">Error</h1>
+
+@if (Model.ShowRequestId)
+{
+    <p><b>ID de la solicitud:</b> <code>@Model.RequestId</code></p>
+}
+
+<h3>Modo de desarrollo</h3>
+
+<p>Cambiar al entorno de <b>Desarrollo</b> mostrará información más detallada sobre el error ocurrido.</p>
+
+<p>
+    <b>El entorno de Desarrollo no debe estar habilitado en aplicaciones en producción.</b>
+    Puede mostrar información sensible proveniente de excepciones a los usuarios finales.
+    Para depurar localmente, habilita el entorno de <b>Desarrollo</b> configurando la variable de entorno <b>ASPNETCORE_ENVIRONMENT</b> como <b>Development</b> y reiniciando la aplicación.
+</p>
