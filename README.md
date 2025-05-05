@@ -57,7 +57,7 @@ Usuarios = new List<Usuario>
 
 ---
 
-## Código QR para 2FA
+## 🔐 Código QR para 2FA
 
 Este es un ejemplo del QR generado para el usuario `admin` con la siguiente URI:
 
