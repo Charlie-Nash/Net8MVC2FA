@@ -1,6 +1,6 @@
 # 🎯 Net8MVC2FA
 
-Aplicación web construida con **ASP.NET Core MVC (.NET 8)** que implementa autenticación en dos pasos (2FA) usando Google Authenticator. Ideal para pruebas educativas y despliegue en entornos controlados.
+Aplicación web construida con **ASP.NET Core MVC (.NET 8)** que implementa autenticación en dos pasos (2FA), para ser usado con apps como **Microsoft Authenticator** o **Google Authenticator**. Ideal para pruebas educativas y despliegue en entornos controlados.
 
 ---
 
