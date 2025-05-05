@@ -61,7 +61,9 @@ Usuarios = new List<Usuario>
 
 Este es un ejemplo del QR generado para el usuario `admin` con la siguiente URI:
 
-otpauth://totp/**MVC_2FA_App**:**admin**?secret=**52QIL4B2CLC2LZWUNTI4VS42EAAH4V3F**&issuer=**MVC_2FA_App**&digits=6
+```bash
+otpauth://totp/MVC_2FA_App:admin?secret=52QIL4B2CLC2LZWUNTI4VS42EAAH4V3F&issuer=MVC_2FA_App&digits=6
+```
 
 ![QR para 2FA](./2FA.png)
 
