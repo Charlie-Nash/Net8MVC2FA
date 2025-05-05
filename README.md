@@ -23,7 +23,7 @@ Aplicación web construida con **ASP.NET Core MVC (.NET 8)** que implementa aute
 
 > http://3.80.216.213:5000/
 
-Usa una lista de usuarios **simulada en memoria** al iniciar el proyecto:
+Usa una lista de usuarios **simulando una BD memoria** al iniciar el proyecto:
 
 ```csharp
 Usuarios = new List<Usuario>
@@ -54,6 +54,16 @@ Usuarios = new List<Usuario>
     }
 };
 ```
+
+---
+
+## Código QR para 2FA
+
+Este es un ejemplo del QR generado para el usuario `admin` con la siguiente URI:
+
+otpauth://totp/**MVC_2FA_App**:**admin**?secret=**52QIL4B2CLC2LZWUNTI4VS42EAAH4V3F**&issuer=**MVC_2FA_App**&digits=6
+
+![QR para 2FA](./2FA.png)
 
 ---
 
