@@ -14,7 +14,7 @@ Aplicación web construida con **ASP.NET Core MVC (.NET 8)** que implementa aute
 
 - .NET 8 (ASP.NET Core MVC)
 - BCrypt para hash de contraseñas
-- TOTP / Google Authenticator
+- TOTP (Time-based One-Time Password)
 - Linux Ubuntu 22.04 (AWS)
 
 ---
