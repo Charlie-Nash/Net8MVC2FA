@@ -35,3 +35,7 @@ node_modules/
 # Publicaciones
 .publish/
 dist/
+!WebAppSSO/wwwroot/lib/bootstrap/dist/
+!WebAppSSO/wwwroot/lib/jquery/dist
+!WebAppSSO/wwwroot/lib/jquery-validation/dist
+!WebAppSSO/wwwroot/lib/jquery-validation/dist
