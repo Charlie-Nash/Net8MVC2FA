@@ -21,9 +21,9 @@ Aplicación web construida con **ASP.NET Core MVC (.NET 8)** que implementa aute
 
 ## 🌐 URL en línea
 
-> http://3.80.216.213:5000/
+> http://{Dirección IPv4 pública de AWS}:5000/
 
-Usa una lista de usuarios **simulando una BD memoria** al iniciar el proyecto:
+Usa una lista de usuarios en memoria **simulando una BD** al iniciar el proyecto:
 
 ```csharp
 Usuarios = new List<Usuario>
